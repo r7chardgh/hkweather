@@ -1,4 +1,4 @@
 module.exports = {
-  basePath: "/hkweather",
-  assetPrefix: "/hkweather",
-};
+    basePath: '/hkweather',
+    assetPrefix: '/hkweather/',
+}
