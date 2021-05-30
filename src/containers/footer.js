@@ -1,16 +1,8 @@
 export default function Footer() {
   return (
     <footer>
-      <div
-        className="footer-bar one"
-        data-sad="fade-right"
-        data-duration="fast"
-      ></div>
-      <div
-        className="footer-bar two"
-        data-sad="fade-right"
-        data-duration="normal"
-      >
+      <div className="footer-bar one"></div>
+      <div className="footer-bar two">
         API:&nbsp;
         <a
           href="https://www.hko.gov.hk/en/weatherAPI/doc/files/HKO_Open_Data_API_Documentation.pdf"
@@ -30,13 +22,10 @@ export default function Footer() {
           Unsplash
         </a>
       </div>
-      <div
-        className="footer-bar three"
-        data-sad="fade-right"
-        data-duration="slow"
-      >
+      <div className="footer-bar three">
         Coded by{" "}
-        <a style={{"color":"#499da7"}}
+        <a
+          style={{ color: "#499da7" }}
           href="https://r7chardgh.github.io/"
           alt="link to front page"
           target="_blank"
