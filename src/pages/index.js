@@ -1,12 +1,11 @@
 import Head from "next/head";
 import Sun from "../containers/sun.js";
 import Footer from "../containers/footer.js";
-import "@r7chardgh/sad-1.0.1/src/style/SAD.css";
-import { init } from "@r7chardgh/sad-1.0.1";
+import { init } from "../../packages/sad-1.0.1/";
 import { useEffect } from "react";
 export default function Home({ times }) {
   useEffect(() => {
-    init();
+    init(true);
   }, []);
   return (
     <>

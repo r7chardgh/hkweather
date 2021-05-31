@@ -6,7 +6,6 @@ export default function Sun({ times, getTime }) {
       c.innerHTML = new Date().toString().slice(16, 24);
     }, 1000);
     return function cleanUp() {
-      console.log("ok");
       clearInterval(clock);
     };
   }, []);
@@ -60,8 +59,8 @@ export default function Sun({ times, getTime }) {
           /> */}
           <div className="info sunrise">
             <div className="container"  >
-              <div className="title">SUNRISE</div>
-              <div className="time" data-sad="flip-up">
+              <div className="title" data-sad="fade-down" data-duration="slowest">SUNRISE</div>
+              <div className="time" data-sad="flip-up" data-duration="slow">
                 <span className="time-dot"></span>
                 <span>{times.data[0][1]}</span>
               </div>
@@ -69,20 +68,20 @@ export default function Sun({ times, getTime }) {
           </div>
           <div className="info sunset">
             <div className="container" >
-              <div className="title">SUNSET</div>
-              <div className="time" data-sad="flip-up">
+              <div className="title" data-sad="fade-up" data-duration="slowest">SUNSET</div>
+              <div className="time" data-sad="flip-up" data-duration="slow">
                 <span className="time-dot"></span>
                 <span>{times.data[0][3]}</span>
               </div>
             </div>
           </div>
           <div className="date">
-            <div className="text" data-sad="flip-up">
+            <div className="text" data-sad="flip-up" data-duration="slowest">
               {date.weekday}&nbsp;|&nbsp;{date.year}-{date.month}-{date.day}
               &nbsp;|&nbsp;
               <span id="clock"></span>
             </div>
-            <div className="box" data-sad="clip-rect"></div>
+            <div className="box" data-sad="flip-up" data-duration="fast"></div>
           </div>
         </section>
       </>
