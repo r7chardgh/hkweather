@@ -53,15 +53,15 @@ export default function Sun({ times, getTime }) {
     return (
       <>
         <section className="sun">
-          <img
+          {/* <img
             className="backdrop"
             src="https://source.unsplash.com/1280x720/?sunrise"
             alt="sunrise"
-          />
+          /> */}
           <div className="info sunrise">
             <div className="container"  >
               <div className="title">SUNRISE</div>
-              <div className="time">
+              <div className="time" data-sad="flip-up">
                 <span className="time-dot"></span>
                 <span>{times.data[0][1]}</span>
               </div>
@@ -70,19 +70,19 @@ export default function Sun({ times, getTime }) {
           <div className="info sunset">
             <div className="container" >
               <div className="title">SUNSET</div>
-              <div className="time">
+              <div className="time" data-sad="flip-up">
                 <span className="time-dot"></span>
                 <span>{times.data[0][3]}</span>
               </div>
             </div>
           </div>
           <div className="date">
-            <div className="text" >
+            <div className="text" data-sad="flip-up">
               {date.weekday}&nbsp;|&nbsp;{date.year}-{date.month}-{date.day}
               &nbsp;|&nbsp;
               <span id="clock"></span>
             </div>
-            <div className="box"></div>
+            <div className="box" data-sad="clip-rect"></div>
           </div>
         </section>
       </>
